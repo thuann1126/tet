@@ -1,38 +1,56 @@
 let data = {
   0: {
-    wish: "Wish my little wife always stays strong and stable in life, eliminates all the unhappy things and has a meaningful new year. I always stand by your side and support you anythime. Love you forever!!",
+    source: "./images/pic1.jpg",
+    wish: "'Nam moi thanh thoi, khoi lo cung toi'",
     reward: "$100",
   },
   1: {
-    wish: "Wish my wife is always cute and beautiful, healthy, and talent. You are always the best girl in my heart, I will and always be on your side now and forever!!",
+    source: "./images/pic2.jpg",
+    wish: "'Nam moi vui ve, suc khoe day minh, khong lo san si, muon gi duoc tat'",
     reward: "$120",
   },
   2: {
-    wish: "New year, new stuffs, new feeling. I wish our love will be bound tighter and tighter, and we will achieve all the things we want. Love you forever!",
+    source: "./images/pic3.jpg",
+    wish: "'Nam moi tien ve, tieu hoai ko het'",
     reward: "$160",
   },
   3: {
-    wish: "If I have 3 wishes, the first one I will wish to be your husband in multi universes, the second one I will wish to love you in every life we are, and the third one I will wish to be the dad of your children in every planet we live! I love you forever!",
+    source: "./images/pic4.jpg",
+    wish: "'Khong con nhan nho, muon gi duoc do'",
     reward: "$180",
   },
   4: {
-    wish: "The life is so empty without you. Thank you for blesisng me with your love, hapiness. Until we stop breathing, you have me, and 100 more new years. Love you forever!",
+    source: "./images/pic5.jpg",
+    wish: "'Sung tuc du day, gap nhieu dieu hay, noi cuoi hehehehehe'",
+    reward: "$200",
+  },
+  4: {
+    source: "./images/pic6.jpg",
+    wish: "'Cau chuc dac biet: Nam moi chong cung hoan toan doi moi, chong se luon luon nghe loi vo va ko con cai vo, ko lam ba xa bun nua. Yeu vo kiep nay va den muon kiep sau'",
     reward: "$200",
   },
 };
 
 let randomNumber = Math.floor(Math.random() * 5);
+let randomMoney = "$ " + Math.floor(Math.random() * 100 + 100);
 let audio = new Audio("./images/bgmusic.mp3");
 audio.play();
+
 let isPlaying = true;
 
+document.getElementById("pictitle").src = data[randomNumber].source;
 document.getElementById("wish").innerHTML = data[randomNumber].wish;
-document.getElementById("reward").innerHTML = data[randomNumber].reward;
+document.getElementById("reward").innerHTML = randomMoney;
 
 function openEnvelop() {
   document.getElementById("container").style.visibility = "visible";
   document.querySelector(".envelopCover").classList.add("openEnvelop");
-  document.querySelector(".envelop:hover").animate("static");
+}
+
+function playMusic() {
+  document.getElementById("speaker").src = "./images/audio-speaker.png";
+  audio.play();
+  isPlaying = true;
 }
 
 function playtoggle() {
