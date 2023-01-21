@@ -32,7 +32,7 @@ let data = {
 };
 
 let randomNumber = Math.floor(Math.random() * 5);
-let randomMoney = "$ " + Math.floor(Math.random() * 100 + 100);
+let randomMoney = "$ " + Math.floor(Math.random() * 300);
 let audio = new Audio("./images/bgmusic.mp3");
 audio.play();
 

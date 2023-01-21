@@ -3,13 +3,14 @@
 body {
   background-image: url("images/background.png");
   background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
 }
 
 .envelop {
   height: 80%;
-  width: 80%;
-  padding: 20% 15%;
+  width: 100%;
+  padding: 20% 0%;
 }
 
 .card:hover {
@@ -22,7 +23,7 @@ body {
 
 #container {
   padding: 5px 10px 5px;
-  margin: 20% 25% auto 36%;
+  margin: 20% 25% auto 26%;
   height: fit-content;
   width: fit-content;
   position: absolute;
@@ -30,6 +31,7 @@ body {
   font-size: 1.5rem;
   background-color: white;
   align-items: center;
+
   visibility: hidden;
 
   border: 1px solid black;
@@ -40,7 +42,7 @@ button {
 }
 #pictitle {
   width: 50%;
-  margin: 0px auto auto 20%;
+  margin: 0px auto auto 25%;
   text-align: center;
 }
 .letter {
